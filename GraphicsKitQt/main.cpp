@@ -6,7 +6,11 @@
 #include <fstream>
 #include <Gamemaster.hpp>
 using namespace genv;
+<<<<<<< HEAD
 ///EZ EGY COMMENT!!!!!
+=======
+///EZ EGY COMMENT!!!!!:))
+>>>>>>> Feature
 class MyApp: public Gamemaster{
 protected:
     Spinbox * sb1;
