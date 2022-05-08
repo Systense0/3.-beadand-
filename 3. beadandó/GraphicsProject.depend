@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1612697619 source:c:\users\flugi\cb\grafkit64\main.cpp
+	"graphics.hpp"
+
+1612611542 c:\users\flugi\cb\grafkit64\include\graphics.hpp
+	<string>
+
+1612698440 source:c:\users\flugi\cb\graphicskit64\main.cpp
+	"graphics.hpp"
+
+1612611542 c:\users\flugi\cb\graphicskit64\include\graphics.hpp
+	<string>
+
+1645087171 source:c:\users\sziksz melinda\downloads\graphicskit64\graphicskit64\main.cpp
+	"graphics.hpp"
+
+1645083284 c:\users\sziksz melinda\downloads\graphicskit64\graphicskit64\include\graphics.hpp
+	<string>
+
+1645119452 source:c:\users\sziksz melinda\documents\programozás\c++\graphicskit64\graphicskit64\main.cpp
+	"graphics.hpp"
+	<math.h>
+
+1645083284 c:\users\sziksz melinda\documents\programozás\c++\graphicskit64\graphicskit64\include\graphics.hpp
+	<string>
+
+1645691285 source:c:\users\sziksz melinda\documents\programozás\c++\graphicskit64\graphicskit64\elso.cpp
+	"graphics.hpp"
+	<iostream>
+	<time.h>
+	<vector>
+
+1645902283 source:c:\users\sziksz melinda\documents\programozás\c++\graphic projectek\hoeses2\elso.cpp
+	"graphics.hpp"
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<vector>
+	<iostream>
+
+1645083284 c:\users\sziksz melinda\documents\programozás\c++\graphic projectek\hoeses2\include\graphics.hpp
+	<string>
+
+1646298741 source:c:\users\sziksz melinda\documents\programozás\c++\graphic projectek\csirke\elso.cpp
+	"graphics.hpp"
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<vector>
+	<iostream>
+	<fstream>
+
+1645083284 c:\users\sziksz melinda\documents\programozás\c++\graphic projectek\csirke\include\graphics.hpp
+	<string>
+
