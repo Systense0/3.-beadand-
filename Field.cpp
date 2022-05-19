@@ -55,7 +55,11 @@ void Field::draw(){
             }
         }
     }
+    if (shape == ""){
+        parent->is_field_full = false;
+    }
 }
+
 
 void Field::handle(genv::event ev){
     if (parent->ismenu){

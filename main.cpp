@@ -15,14 +15,16 @@ protected:
         Pushbutton *pb1;
         Staticbox *st2;
         Staticbox *st3;
+        Staticbox *st4;
         Pushbutton *pb2;
         std::vector<Field*> f;
 public:
     MyApp(int X, int Y): Gamemaster(X,Y){
         st1 = new Staticbox(this,100,100,400,100,"Amoba");
         pb1 = new Pushbutton(this, 220, 250, 150,100, "Start 2v2");
-        st1 = new Staticbox(this,100,100,400,100,"Player1 won!");
-        st1 = new Staticbox(this,100,100,400,100,"Player2 won!");
+        st2 = new Staticbox(this,100,100,400,100,"Player1 won!");
+        st3 = new Staticbox(this,100,100,400,100,"Player2 won!");
+        st4 = new Staticbox(this,100,100,400,100,"Draw!");
         pb2 = new Pushbutton(this, 210, 250, 200,100, "Back to menu");
         for (int i=0; i<=600; i+=40){
             for (int k=0; k<=600; k+=40){

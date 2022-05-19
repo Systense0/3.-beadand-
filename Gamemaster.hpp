@@ -13,8 +13,10 @@ protected:
     int X,Y;
     std::vector<Widget*> w;
     friend class Pushbutton;
+
 public:
     Gamemaster(int x,int y);
+    bool is_field_full=true;
     bool witchplayer = false;
     std::vector<Kord*> play1;
     std::vector<Kord*> play2;

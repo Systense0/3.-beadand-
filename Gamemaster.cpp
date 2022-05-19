@@ -3,6 +3,7 @@
 #include "Widgets.hpp"
 #include "graphics.hpp"
 #include "iostream"
+#include <unistd.h>
 #include <time.h>
 
 using namespace genv;
@@ -26,16 +27,21 @@ void Gamemaster::start_screen(){
     for (int i=0; i<2;i++){
         w[i]->draw();
     }
+    is_field_full=true;
     gout << refresh;
     ismenu = true;
 }
 void Gamemaster::end_screen(int k){
     cclear();
-    for (int i=2; i<5;i++){
-        if (i!=k){
-            w[i]->draw();
-        }
+    for(int i=0;i<w.size();i++)
+    {
+        w[i]->draw();
     }
+    gout << refresh;
+    sleep(1);
+    cclear();
+    w[k]->draw();
+    w[5]->draw();
     gout<<refresh;
     isend = true;
 }
@@ -66,7 +72,7 @@ void Gamemaster::is_five(){
                 counterker2play1++;
             }
             if (counterfugplay1 == 5 || countervizplay1==5 || counterker1play1==5 || counterker2play1==5){
-                end_screen(3);
+                end_screen(2);
                 break;
             }
         }
@@ -84,11 +90,11 @@ void Gamemaster::is_five(){
             if (play2[k]->x== s.x+40 && play2[k]->y==s.y+40){
                 counterker1play2++;
             }
-            if (play1[k]->x==s.x-40 && play1[k]->y==s.y+40){
+            if (play2[k]->x==s.x-40 && play2[k]->y==s.y+40){
                 counterker2play2++;
             }
             if (counterfugplay2 == 5 || countervizplay2==5 || counterker1play2==5 || counterker2play2==5){
-                end_screen(2);
+                end_screen(3);
                 break;
             }
         }
@@ -113,7 +119,7 @@ void Gamemaster::event_loop(){
         }
         else if(isend){
             if (ev.button==btn_left){
-                for (int i=2; i<5;i++){
+                for (int i=2; i<6;i++){
                     if(w[i]->is_selected(ev.pos_x,ev.pos_y)){
                        w[i]->handle(ev);
                     }
@@ -123,7 +129,7 @@ void Gamemaster::event_loop(){
         else{
             if (ev.button==btn_left){
                 bool is_any_selected = false;
-                for(int i=0; i<w.size();i++){
+                for(int i=6; i<w.size();i++){
                     if(w[i]->is_selected(ev.pos_x,ev.pos_y)){
                         prev = i;
                         is_any_selected = true;
@@ -151,6 +157,10 @@ void Gamemaster::event_loop(){
                 {
                     w[i]->draw();
                 }
+                if (is_field_full==true){
+                    end_screen(4);
+                }
+                is_field_full=true;
                 gout << refresh;
 
             }

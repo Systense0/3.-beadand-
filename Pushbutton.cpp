@@ -27,7 +27,7 @@ void Pushbutton::handle(genv::event ev){
         parent->play2.clear();
         parent->start_screen();
         parent->ismenu=true;
-        for (int i=5; i<parent->w.size();i++){
+        for (int i=6; i<parent->w.size();i++){
             parent->w[i]->handle(ev);
         }
     }
